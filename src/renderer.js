@@ -54,7 +54,7 @@ $(function() {
 
     let keys = [];
 
-    renderer.resize(800, 600);
+    renderer.resize(200, 160);
 
     const hasAccidental = (k, a) => k.substring(1, 2) == a;
     const findSignature = id => signatures.find(s => s.id === id);
@@ -97,17 +97,17 @@ $(function() {
     };
     
     const detectChord = (k)=> {
-        let dc="";
+        let dc="-";
         if(k.length !== 0){
             let c = detect(k);
             dc=c[0];
             if(dc==null){
-                dc="None (try more notes)"
+                dc="-"
             } else {
                 dc=c.toString()
             }
         }
-        $(`#chorddetect`).html(`<h3>Detected Chord:${dc}</h3>`);
+        $(`#chorddetect`).html(`<h3>Detected Chord:\n${dc}</h3>`);
     }
 
     // format number of flats/ sharps in a given key signature
@@ -120,8 +120,8 @@ $(function() {
     // TODO: disambiguate "keys" (notes) from keySignatures
     const renderStave = ({ keys, signature }) => {
         // create a stave of width 400 at position 10, 40 on the canvas.
-        const topStaff = new VF.Stave(30, 40, 200);
-        const bottomStaff = new VF.Stave(30, 100, 200);
+        const topStaff = new VF.Stave(30, -10, 200);
+        const bottomStaff = new VF.Stave(30, 50, 200);
 
         const brace = new Vex.Flow.StaveConnector(topStaff, bottomStaff).setType(3);
         const lineRight = new Vex.Flow.StaveConnector(topStaff, bottomStaff).setType(6);

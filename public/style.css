@@ -13,9 +13,10 @@ h1 {
   line-height: 1.2;
   margin-bottom: 4rem;
 }
+h3 {
+    margin: 1em 0 0 0; 
+}
 div.sheetmusic { 
-  display: inline-block;
-  text-align: initial;
 }
 td:first-child, th:first-child {
   padding-left: 0;
@@ -31,8 +32,8 @@ td, th {
 }
 #piano {
   position: relative;
-  margin: 2em 0 0 0;
-  width:1200px;
+  margin: 0em 0 0 0;
+  width:800px;
   border-radius: 10px;
   box-shadow: 0 1px 0 #999, 0 2px 0 #999, 0 3px 0 #999, 1px 4px 0 #999, 2px 5px 0 #999, 3px 6px 0 #999, 4px 7px 0 #999, 5px 8px 0 #999, 0 0 8px #000;
   overflow: auto;
@@ -47,8 +48,8 @@ td, th {
 .keys .key {
   float: left;
   position: relative;
-  width: 50px;
-  height: 180px;
+  width: 40px;
+  height: 90px;
   margin: 0 2px 2px 0;
   background: #fff;
   border-radius: 0 0 4px 4px;
@@ -70,7 +71,7 @@ td, th {
   left: -16px;
   display: block;
   width: 32px;
-  height: 117px;
+  height: 40px;
   background: #000;
   border-radius: 0 0 4px 4px;
   box-shadow: 1px 1px 0 #555, 2px 2px 0 #555;
